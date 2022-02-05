@@ -137,6 +137,7 @@ button {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--main-logo-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-first {
@@ -155,6 +156,10 @@ button {
   color: var(--header-text-color-first);
 }
 
+.header-link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .header-contacts {
   font-weight: 500;
   font-size: 14px;
@@ -163,6 +168,16 @@ button {
   color: var(--header-text-color-second);
   justify-content: center;
   align-items: center;
+}
+
+.header-mail,
+.header-tel {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-mail svg,
+.header-tel svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-icon {
@@ -345,7 +360,34 @@ button {
   display: flex;
 }
 
+.what-we-do-card {
+  position: relative;
+  /* display: flex; */
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.what-we-do-top-text {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 205px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
 .list-picture {
+  /* position: relative; */
   margin-right: 30px;
 }
 
