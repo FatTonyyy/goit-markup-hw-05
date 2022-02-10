@@ -176,7 +176,7 @@ button {
   height: 4px;
 
   border-radius: 2px;
-  background-color: rgba(33, 150, 243, 1);
+  background-color: var(--accent-text-color);
 }
 
 .header-contacts {
@@ -792,15 +792,19 @@ button {
   border-radius: 4px;
   border-color: #f5f4fa;
   padding: 6px 22px;
+  border: none;
 
   transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function);
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .button-style:hover,
 .button-style:focus {
   color: var(--second-text-color);
   background-color: var(--accent-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*-------------------------------PORTFOLIO LIST-----------------*/
@@ -813,17 +817,19 @@ button {
 
 .portfolio-item {
   background: #ffffff;
-  border: 1px solid #eeeeee;
 
   flex-basis: calc(100% / 3 - 30px);
   margin: 13px;
 }
 
-/* .portfolio-image {
-} */
+.portfolio-image {
+  display: block;
+  max-width: 100%;
+}
 
 .portfolio-link {
   display: block;
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .portfolio-wrap {
@@ -855,7 +861,8 @@ button {
   transition: transform 250ms var(--timing-function);
 }
 
-.portfolio-link:hover .portfolio-top-text {
+.portfolio-link:hover .portfolio-top-text,
+.portfolio-link:focus .portfolio-top-text {
   transform: translateY(0);
 }
 
@@ -864,6 +871,7 @@ button {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 20px;
+  border: 1px solid #eeeeee;
 }
 
 .portfolio-list-subtitle {
